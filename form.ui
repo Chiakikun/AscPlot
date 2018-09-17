@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>280</width>
+    <height>143</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QPushButton" name="ExecButton">
+   <property name="geometry">
+    <rect>
+     <x>50</x>
+     <y>110</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>実行</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="CloseButton">
+   <property name="geometry">
+    <rect>
+     <x>150</x>
+     <y>110</y>
+     <width>75</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>閉じる</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="LoadFileSelect">
+   <property name="geometry">
+    <rect>
+     <x>250</x>
+     <y>19</y>
+     <width>21</width>
+     <height>23</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLineEdit" name="LoadFilePath">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>241</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>4</y>
+     <width>91</width>
+     <height>16</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>AsciiGridファイル</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="ColNum">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>46</y>
+     <width>61</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>999</number>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>50</y>
+     <width>50</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>行数</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="geometry">
+    <rect>
+     <x>80</x>
+     <y>80</y>
+     <width>50</width>
+     <height>12</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>列数</string>
+   </property>
+  </widget>
+  <widget class="QSpinBox" name="RowNum">
+   <property name="geometry">
+    <rect>
+     <x>12</x>
+     <y>76</y>
+     <width>61</width>
+     <height>22</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>999</number>
+   </property>
+  </widget>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>ExecButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>exec()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>85</x>
+     <y>116</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>27</x>
+     <y>106</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>CloseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>177</x>
+     <y>118</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>250</x>
+     <y>101</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>LoadFileSelect</sender>
+   <signal>clicked()</signal>
+   <receiver>Dialog</receiver>
+   <slot>LoadFileSelect_Click()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>260</x>
+     <y>34</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>222</x>
+     <y>57</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>Dialog</sender>
+   <signal>finished(int)</signal>
+   <receiver>Dialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>160</x>
+     <y>46</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>161</x>
+     <y>64</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>LoadFileSelect_Click()</slot>
+ </slots>
+</ui>
